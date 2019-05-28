@@ -6,20 +6,29 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title id="demo">Document</title>
+  <script src="index.js">
+  </script>
+
 </head>
 <body>
-  <script src="index.js"></script>
 
   <h1 class="title">rock paper scissors</h1>
 
-<div class="choices">
 
-<div class="choice" id="rock">rock</div>
-<div class="choice" id="paper">paper</div>
-<div class="choice" id="scissors">scissors</div>
 
-</div>
+  <div class="choice" id="rock" onclick="this.innerHTML='you chose rock'">
+
+    rock
+    </div>
+  <div class="choice" id="paper" onclick="this.innerHTML='you chose paper'">
+  paper
+    </div>
+  <div class="choice" id="scissors" onclick="this.innerHTML='you chose scissors'">
+
+    scissors</div>
+
+
 
   <div class="rps-selections">
 
