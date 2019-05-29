@@ -3,32 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="main.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title id="demo">Document</title>
-  <script src="index.js">
-  </script>
 
 </head>
 <body>
 
   <h1 class="title">rock paper scissors</h1>
 
-
+<div class="choices">
 
   <div class="choice" id="rock" onclick="this.innerHTML='you chose rock'">
-
     rock
     </div>
   <div class="choice" id="paper" onclick="this.innerHTML='you chose paper'">
   paper
     </div>
   <div class="choice" id="scissors" onclick="this.innerHTML='you chose scissors'">
-
     scissors</div>
 
+    <p id="computer"></p>
 
+<div class="display">
+  </div>
+
+</div>
 
   <div class="rps-selections">
 
@@ -38,5 +40,7 @@
 
   </div>
 
+  <script src="index.js">
+  </script>
 </body>
 </html>
