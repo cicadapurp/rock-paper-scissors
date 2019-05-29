@@ -6,22 +6,26 @@
     <body>
 
 <div class="board">
+
  <h1>Tic Tac Toe</h1>
- <table>
+ <br>
+ <button onclick="openFullscreen();">Go Fullscreen Mode</button>
+<button onclick="closeFullscreen();">Close Fullscreen</button>
+ <table class="gameboard">
    <tr>
-     <td id="0"></td>
-     <td id="a1" class="vert"></td>
-     <td id="2"></td>
+     <td id="0" ondblclick="ofunction()" onclick="changeText(this)"></td>
+     <td id="1" class="vert" ondblclick="ofunction()" onclick="changeText(this)"></td>
+     <td id="2" ondblclick="ofunction()" onclick="changeText(this)"></td>
    </tr>
    <tr>
-     <td id="3" class="hori"></td>
-     <td id="4" class="vert hori"></td>
-     <td id="5" class="hori"></td>
+     <td id="3" class="hori" ondblclick="ofunction()" onclick="changeText(this)"></td>
+     <td id="4" class="vert hori" ondblclick="ofunction()" onclick="changeText(this)"></td>
+     <td id="5" class="hori" ondblclick="ofunction()" onclick="changeText(this)"></td>
    </tr>
    <tr>
-     <td id="6"></td>
-     <td id="7" class="vert"></td>
-     <td id="8"></td>
+     <td id="6" ondblclick="ofunction()" onclick="changeText(this)"></td>
+     <td id="7" class="vert" ondblclick="ofunction()" onclick="changeText(this)"></td>
+     <td id="8" ondblclick="ofunction()" onclick="changeText(this)"></td>
    </tr>
  </table>
 </div>

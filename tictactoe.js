@@ -1,17 +1,63 @@
-startOfGame = [null, null, null,
- null, null, null,
- null, null, null]
 var userChoice;
 // options = [0, 1, 2, 3, 4, 5, 6, 7, 8]
-var board = document.getElementsByClassName('board');
+var board = document.getElementsByTagName('td');
+board.innerHTML
 
+userChoice = board.onclick;
 
-
-for(var i = 0; i < board.length; i++) {
-  board[i].addEventListener("click", function() {
-    userChoice = this.id;
-  });
+function changeText(id) {
+  id.innerHTML = "x"
 }
+
+var elem = document.documentElement;
+
+/* Function to open fullscreen mode */
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.mozRequestFullScreen) { /* Firefox */
+    elem.mozRequestFullScreen();
+  } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE/Edge */
+    elem.msRequestFullscreen();
+  }
+}
+
+/* Function to close fullscreen mode */
+function closeFullscreen() {
+  if (document.exitFullscreen) {
+    document.exitFullscreen();
+  } else if (document.mozCancelFullScreen) {
+    document.mozCancelFullScreen();
+  } else if (document.webkitExitFullscreen) {
+    document.webkitExitFullscreen();
+  } else if (document.msExitFullscreen) {
+    document.msExitFullscreen();
+  }
+}
+
+// Events
+var output = document.getElementById("myP");
+document.addEventListener("fullscreenchange", function() {
+  output.innerHTML = "fullscreenchange event fired!";
+});
+document.addEventListener("mozfullscreenchange", function() {
+  output.innerHTML = "mozfullscreenchange event fired!";
+});
+document.addEventListener("webkitfullscreenchange", function() {
+  output.innerHTML = "webkitfullscreenchange event fired!";
+});
+document.addEventListener("msfullscreenchange", function() {
+  output.innerHTML = "msfullscreenchange event fired!";
+});
+
+
+// for(var i = 0; i < board.length; i++) {
+//   board[i].addEventListener("click", function() {
+//   console.log("clicked");
+//   });
+// }
 
 //  computerChoice = options[Math.floor(Math.random() * options.length)];
 // function alternate() {
@@ -38,6 +84,9 @@ for(var i = 0; i < board.length; i++) {
 //
 //   }
 // };
+startOfGame = [null, null, null,
+  null, null, null,
+  null, null, null]
 
 owin =
 [
