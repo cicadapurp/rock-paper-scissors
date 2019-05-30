@@ -5,32 +5,72 @@
   <script src="tictactoe.js"></script>
     <body>
 
+      <h1>Tic Tac Toe</h1>
+      <button onclick="openFullscreen();">Go Fullscreen Mode</button>
+      <button onclick="closeFullscreen();">Close Fullscreen</button>
 <div class="board">
 
- <h1>Tic Tac Toe</h1>
  <br>
- <button onclick="openFullscreen();">Go Fullscreen Mode</button>
-<button onclick="closeFullscreen();">Close Fullscreen</button>
- <table class="gameboard">
-   <tr>
-     <td id="0" ondblclick="ofunction()" onclick="changeText(this)"></td>
-     <td id="1" class="vert" ondblclick="ofunction()" onclick="changeText(this)"></td>
-     <td id="2" ondblclick="ofunction()" onclick="changeText(this)"></td>
-   </tr>
-   <tr>
-     <td id="3" class="hori" ondblclick="ofunction()" onclick="changeText(this)"></td>
-     <td id="4" class="vert hori" ondblclick="ofunction()" onclick="changeText(this)"></td>
-     <td id="5" class="hori" ondblclick="ofunction()" onclick="changeText(this)"></td>
-   </tr>
-   <tr>
-     <td id="6" ondblclick="ofunction()" onclick="changeText(this)"></td>
-     <td id="7" class="vert" ondblclick="ofunction()" onclick="changeText(this)"></td>
-     <td id="8" ondblclick="ofunction()" onclick="changeText(this)"></td>
-   </tr>
- </table>
+   <div class="table">
+
+    <div class="right">
+       <div class="td" id="0" ondrop="drop(event)" ondragover="allowDrop(event)">
+       </div>
+       <div class="td vert" id="1" ondrop="drop(event)" ondragover="allowDrop(event)">
+       </div>
+       <div class="td" id="2" ondrop="drop(event)" ondragover="allowDrop(event)">
+       </div>
+    </div>
+
+
+    <div class="center">
+       <div class="td hori" id="3" ondrop="drop(event)" ondragover="allowDrop(event)">
+       </div>
+       <div class="td hori vert" id="4" ondrop="drop(event)" ondragover="allowDrop(event)">
+       </div>
+       <div class="td hori" id="5" ondrop="drop(event)" ondragover="allowDrop(event)">
+       </div>
+    </div>
+
+
+     <div class="left">
+       <div class="td" id="6" ondrop="drop(event)" ondragover="allowDrop(event)">
+       </div>
+       <div class="td vert" id="7" ondrop="drop(event)" ondragover="allowDrop(event)">
+       </div>
+         <div class="td" id="8" ondrop="drop(event)" ondragover="allowDrop(event)">
+       </div>
+
+    </div>
+  </div>
 </div>
 
+
+
+
 <h1 id="display"> </h1>
+
+
+
+<div class="pieces" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+  <p ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="dragtarget">O</p>
+
+<p ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="dragtarget">O</p>
+<p ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="dragtarget">O</p>
+  <p ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="dragtarget">O</p>
+</div>
+
+<div class="pieces left" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+  <p ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="dragtarget">X</p>
+
+<p ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="dragtarget">X</p>
+
+<p ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="dragtarget">X</p>
+  <p ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="dragtarget">X</p>
+</div>
+
 
 
 </body>
